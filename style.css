@@ -85,6 +85,12 @@ nav ul li:active{
     flex-grow: 1;
     background-color: rgb(231, 231, 231);
 }
+.side.left-column{
+    border-bottom-right-radius: 2rem;
+}
+.side.right-column{
+    border-bottom-left-radius: 2rem;
+}
 
 main{
     /*width: 100%;*/
