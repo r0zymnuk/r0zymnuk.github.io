@@ -9,8 +9,11 @@
 
 </head>
 <body>
-    
+    <div class="page-scroll-cont">
+        <hr id="page-scroll-progress-bar">
+    </div>
     <nav id="nav" class="navbar nav-top">
+        
         <ul>
             <li><a href="">Vehicles</a></li>
             <li><a href="">Innovation</a></li>
@@ -20,10 +23,9 @@
         </ul>
     </nav>
 
-    <div class="main-container">
+    <div id="main-cont" class="main-container">
 
         <div class="side left-column">
-            <h2>Left</h2>
         </div>
 
         <main>
@@ -77,10 +79,17 @@
             </table>
     
             <iframe style="margin: auto; margin-top:2rem;" width="560" height="315" src="https://www.youtube.com/embed/ORS436_dhcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <div class="bg-rand-cont">
+                <h2>Randomize body background rgb parameters</h2>
+                <button class="bg-rand-b" onclick="changeBodyBg(0)">Randomize Red</button>
+                <button class="bg-rand-b" onclick="changeBodyBg(1)">Randomize Green</button>
+                <button class="bg-rand-b" onclick="changeBodyBg(2)">Randomize Blue</button>
+            </div>
+
         </main>
 
         <div class="side right-column">
-            <h2>Right</h2>
         </div>
 
     </div>
@@ -97,6 +106,6 @@
     </footer>
 
     <!--Javascript-->
-    <!--<script src="scripts.js"></script>-->
+    <script src="scripts.js"></script>
 </body>
 </html>

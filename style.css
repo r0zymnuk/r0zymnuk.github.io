@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
 
+
 *{
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Didact Gothic', sans-serif;
 }
 
 body{
@@ -10,11 +12,32 @@ body{
     width: 100vw;
     min-height: 100vh;
     overflow-x: hidden;
+    background-color: white;
+    background: #fff;
 }
 a{
     color: #000;
     text-decoration: none;
 }
+
+.page-scroll-cont{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 19;
+    height: 0.075cm;
+    width: 100vw;
+    background: #dbdbdb;
+}
+.page-scroll-cont > hr{
+    height: 0.075cm;
+    width: 0vw;
+    border-radius: 0;
+    border: none;
+    background-color: rgb(75, 91, 163);
+    transition: width .05s;
+}
+
 
 nav{
     position: fixed;
@@ -34,13 +57,15 @@ nav{
     line-height: 5rem;
     background-color: #fff;
 }
-/*
+
 nav.nav-top{
     line-height: 6rem;
     height: 6rem;
     background-color: rgba(255, 255, 255, 0.5); 
 }
-/*Scrolled navbar/*
+
+/* Scrolled navbar */
+/*
 nav.nav-scrolled{
     background-color: rgba(255, 255, 255);
     
@@ -55,18 +80,17 @@ nav ul{
     vertical-align: middle;
     display: inline-flex;
     list-style: none;
-    transition: .2s;
 }
 nav ul li{
-    transition: .15s;
+    transition: height .1s;
+    transition: background-color .2s;
     font-weight: 400;
-    transition: .2s;
 }
 nav ul li:hover{
-    background-color: rgba(235, 235, 235, 0.814);
+    background-color: rgba(235, 235, 235, 0.7);
 }
 nav ul li:active{
-    background-color: rgba(117, 117, 117, 0.814);
+    background-color: rgba(117, 117, 117, 0.8);
     color: #fff;
 }
 
@@ -76,12 +100,15 @@ nav ul li:active{
 .main-container{
     display: inline-flex;
     width: 100vw;
-    padding-top: 5rem;
+    padding-top: 0rem;
 }
 
 .main-container > .side{
     flex-grow: 1;
-    background-color: rgb(231, 231, 231);
+    background-color: rgba(190, 190, 190, 0.4);
+    -webkit-box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.3);
+-moz-box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.3);
+box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.3);
 }
 .side.left-column{
     border-bottom-right-radius: 2rem;
@@ -115,6 +142,25 @@ main > .img-cont{
     background-size: cover;
 }
 
+
+.bg-rand-cont{
+    padding-top: 2rem;
+    align-self: center;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+.bg-rand-cont > h2{
+    margin-bottom: .7rem;
+}
+.bg-rand-cont > .bg-rand-b{
+    margin-inline: .7rem;
+    font-size: large;
+    padding-left: .7rem;
+    padding-right: .7rem;
+    padding-top: .3rem;
+    padding-bottom: .3rem;
+}
 
 footer{
     margin-top: 5rem;
