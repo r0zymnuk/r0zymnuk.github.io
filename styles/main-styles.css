@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+    transition: .2s;
+}
+
+body{
+    min-height: 100vh;
+    width: 100wv;
+    overflow-x: hidden;
+}
+
+
+nav#head-nav{
+    color: rgb(16, 16, 16);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    height: 5rem;
+    line-height: 5rem;
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    overflow: hidden;
+    background: rgba(234, 234, 234, 0.5);
+    border-bottom: 2px solid rgba(234, 234, 234, 0.5);
+    backdrop-filter: blur( 12px );
+    -webkit-backdrop-filter: blur( 12px );
+    box-shadow: 0 0px 16px 0 rgba(91, 91, 91, 0.4);
+    transition: .15s;
+}
+body.dark nav#head-nav{
+    color: rgb(241, 241, 241);
+    background: rgba(36, 36, 36, 0.5);
+    box-shadow: 0 0px 16px 0 rgba(27, 27, 27, 0.4);
+}
+nav#head-nav.onTop{
+    color: white;
+    background: none;
+    backdrop-filter: blur( 7.5px );
+    -webkit-backdrop-filter: blur( 7.5px );
+    border-bottom: 2px solid rgba(255, 255, 255, 0.75);
+    box-shadow: none;
+}
+nav#head-nav ul#main-nav-list{
+    display: inline-flex;
+    list-style: none;
+    justify-content: center;
+    font-size: large;
+    font-weight: 500;
+}
+nav#head-nav a.nav-link-item{
+    margin-inline: 1rem;
+    padding-inline: 1rem;
+    transition: .2s;
+}
+nav#head-nav a#theme-toggle{
+    margin-left: 2rem;
+    margin-right: 2rem;
+    cursor: pointer;
+    transform: scale(1.5);
+}
+
+nav#head-nav a:hover{
+    color: #e8966c;
+}
+nav#head-nav.onTop a:hover{
+    /* background-color: rgba(255, 255, 255, 0.15); */
+    color: #ffceb8;
+}
+
+
+nav#head-nav .title{
+    font-weight: 600;
+    font-size: 1.5rem;
+    padding-inline: 1rem;
+}
+
+video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+body.dark video{
+    filter: grayscale(20%) brightness(50%);
+}
+header{
+    height: 100vh;
+    line-height: 100vh;
+    width: 100%;
+    text-align: center;
+    /* color: rgb(210, 234, 255); */
+    color: white;
+    font-size: x-large;
+    
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,0) 70%, rgba(0,0,0,0.85) 100%);
+}
+body.dark header{
+    background: linear-gradient(180deg, rgba(255,255,255,0) 70%, rgba(4,4,4,0.85) 100%);
+}
+a.read-more{
+    position: absolute;
+    transform: translateY(-8rem);
+    color: white;
+    font-size: x-large;
+    text-align: center;
+    width: 100%;
+    transition: color .2s;
+}
+a.read-more:hover{
+    color: #e8966c;
+}
+
+main{
+    width: 100vw;
+    background-color: white;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    border-top: 2px solid white;
+}
+body.dark main{
+    background-color: rgba(5, 5, 5);;
+    color: white;
+}
+
+
+section{
+    width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+section h3, h4, p{
+    width: 900px;
+    margin: 0 auto;
+}
+section *{
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+section h3.caption{
+    font-size: 2.5rem;
+}
+section h4.semi-caption{
+    font-size: 2.2rem;
+    margin-bottom: 0rem;
+}
+section p{
+    font-size: 1.5rem;
+}
+section img{
+    border-radius: 10px;
+}
+
+
+
+
+
+footer{
+    position: static;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    box-shadow: 0 0px 8px 0 rgba(91, 91, 91, 0.4);
+    text-align: center;
+    padding: 2rem;
+}
+body.dark footer{
+    background-color: rgba(5, 5, 5);
+    box-shadow: 0 0px 16px -8px rgba(255, 255, 255, 1);
+    border-top: 2px solid white;
+    color: white;
+}
+footer > *{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+footer a:hover{
+    color: #e8966c;
+}
